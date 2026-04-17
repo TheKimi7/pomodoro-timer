@@ -72,6 +72,7 @@ def default_timer(minutes, break_minutes, sesh_emoji, focus_emoji, break_emoji):
                 print("\n⚠️- invalid answer :( try again! ")
 
         for session in range(sessions):
+            print(f"\nsession {session + 1} of {sessions}")
             print("\ngrab your belongings! books, headphones, pencils, pens and lock in! ♡")
 
             for i in range(10, 0, -1):
@@ -85,15 +86,15 @@ def default_timer(minutes, break_minutes, sesh_emoji, focus_emoji, break_emoji):
             for seconds in range(minutes, 0, -1):
                 mins_display = seconds // 60
                 secs_display = seconds % 60
-                print(f"{mins_display:02}:{secs_display:02}")
+                print(f"\r{mins_display:02}:{secs_display:02}", end="", flush=True)
                 time.sleep(1)
 
             # BREAK
-            print(f"\n\n\t\t{break_emoji} break time! don’t vanish pls")
+            print(f"\n\n\t\t{break_emoji} break time! don't vanish pls")
             for seconds in range(break_minutes, 0, -1):
                 mins_display = seconds // 60
                 secs_display = seconds % 60
-                print(f"{mins_display:02}:{secs_display:02}")
+                print(f"\r{mins_display:02}:{secs_display:02}", end="", flush=True)
                 time.sleep(1)
 
         print("\n\t\t✏️; all done! proud of you ♡")
@@ -204,7 +205,7 @@ def monochrome_pomodoro():
         c_time_custom()
 
 
-# CUSTOM TIMER (same, just cleaned names + cute tone)
+# CUSTOM TIMER
 
 def c_time_custom():
 
@@ -244,6 +245,7 @@ def c_time_custom():
                 print("⚠️- invalid answer. enter a number! ")
 
         for session in range(sessions):
+            print(f"\nsession {session + 1} of {sessions}")
             print("\nthis is your moment, don't give up!")
 
             for i in range(10,0,-1):
@@ -256,15 +258,15 @@ def c_time_custom():
                 h = seconds//3600
                 m = (seconds%3600)//60
                 s = seconds%60
-                print(f"{h:02}:{m:02}:{s:02}")
+                print(f"\r{h:02}:{m:02}:{s:02}", end="", flush=True)
                 time.sleep(1)
 
-            print("\nbreak time; don’t scroll into another dimension >_<")
+            print("\nbreak time; don't scroll into another dimension >_<")
             for seconds in range(total_break_seconds,0,-1):
                 h = seconds//3600
                 m = (seconds%3600)//60
                 s = seconds%60
-                print(f"{h:02}:{m:02}:{s:02}")
+                print(f"\r{h:02}:{m:02}:{s:02}", end="", flush=True)
                 time.sleep(1)
 
         continue_option = get_yes_no("\n lock in again? y/n: ")
