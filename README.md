@@ -62,7 +62,6 @@ python pomodoro_timer_v1.py
 ---
 
 ## future improvements
-
 * persistent session tracking using file handling
 * sound/notification integration
 * menu-driven navigation system
@@ -75,15 +74,6 @@ python pomodoro_timer_v1.py
 <img width="587" height="751" alt="image" src="https://github.com/user-attachments/assets/b1c32ce4-c833-4b59-ae25-64a3380dc99b" />
 <img width="660" height="726" alt="image" src="https://github.com/user-attachments/assets/31cdbde2-a09e-4047-8020-51f27bd1b761" />
 <img width="572" height="553" alt="image" src="https://github.com/user-attachments/assets/f81051a6-eb77-4a6e-b68d-1857e9fd421a" />
-
-
-
-suggested captures:
-* theme selection menu
-* timer selection screen
-* active countdown (study phase)
-* break phase
-* session completion output
 
 ---
 
