@@ -65,7 +65,6 @@ python pomodoro_timer_v1.py
 
 * persistent session tracking using file handling
 * sound/notification integration
-* optimized timer display (single-line updating format)
 * menu-driven navigation system
 * graphical user interface (GUI) version
 
