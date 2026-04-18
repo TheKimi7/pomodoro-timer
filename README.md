@@ -1,6 +1,6 @@
 # customizable pomodoro timer
 
-a command-line python application that implements a structured and customizable pomodoro timer with multiple themes, session handling, and robust input validation.
+a python terminal user interface (TUI) application that implements a structured and customizable pomodoro timer with multiple themes, live countdowns, progress bars, and keyboard-driven controls. built with [textual](https://textual.textualize.io).
 
 ---
 
@@ -25,47 +25,90 @@ a command-line python application that implements a structured and customizable 
 * session-based execution:
   * supports multiple consecutive study sessions in a single run
 
-* centralized timer logic:
-  * reusable core function reduces redundancy and improves scalability
+* live TUI experience:
+  * large LCD-style clock, live progress bar, phase status, and persistent header/footer
+  * keyboard controls: `space` to pause/resume, `s` to skip the current phase, `q` to return to the menu, `esc` to go back a screen
 
 * strong input validation:
-  * ensures only valid numeric inputs are accepted
-  * handles invalid entries using exception handling and loops
+  * invalid numeric inputs are rejected in-line without crashing the app
 
-* interactive CLI interface:
-  * structured prompts and clean output flow
+---
+
+## requirements
+
+* python 3.8+
+* see `requirements.txt` (textual + its dependencies)
+
+---
+
+## setup
+
+create a virtual environment and install dependencies:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+on windows, activate the venv with `venv\Scripts\activate` instead.
 
 ---
 
 ## how to run
 
-```id="run101"
-python pomodoro_timer_v1.py
+with the venv activated:
+
+```bash
+python pomodoro_timer_tui.py
 ```
+
+or invoke the venv's python directly without activating:
+
+```bash
+./venv/bin/python pomodoro_timer_tui.py
+```
+
+---
+
+## keyboard controls
+
+| key       | action                              |
+|-----------|-------------------------------------|
+| `space`   | pause / resume the running timer    |
+| `s`       | skip the current phase              |
+| `q`       | return to the theme menu            |
+| `esc`     | go back one screen                  |
+| `ctrl+c`  | quit the app                        |
 
 ---
 
 ## project structure
 
-* pomodoro_timer_v1.py → main application file
+* `pomodoro_timer_tui.py` → main TUI application
+* `pomodoro_timer_cli.py` → legacy command-line version
+* `requirements.txt` → pinned python dependencies
+* `venv/` → local virtual environment (git-ignored)
 
 ---
 
 ## concepts demonstrated
 
-* modular programming using functions
-* control flow (loops and conditionals)
+* textual-based TUI with multiple `Screen` subclasses
+* reactive UI updates driven by `set_interval` ticks
+* modular programming using functions and classes
+* control flow (loops, conditionals) and state machines (prep → focus → break)
 * input validation with try-except blocks
-* time-based execution using the `time` module
 * code reusability and abstraction
 
 ---
 
 ## future improvements
+
 * persistent session tracking using file handling
-* sound/notification integration
-* menu-driven navigation system
-* graphical user interface (GUI) version
+* sound / desktop notification integration
+* per-theme color palettes (textual CSS)
+* statistics screen summarizing completed sessions
 
 ---
 
@@ -79,4 +122,4 @@ python pomodoro_timer_v1.py
 
 ## notes
 
-this project is part of a broader effort to build structured, user-interactive command-line applications while strengthening core python fundamentals.
+this project is part of a broader effort to build structured, user-interactive terminal applications while strengthening core python fundamentals.
