@@ -111,15 +111,3 @@ or invoke the venv's python directly without activating:
 * statistics screen summarizing completed sessions
 
 ---
-
-## preview
-
-<img width="587" height="751" alt="image" src="https://github.com/user-attachments/assets/b1c32ce4-c833-4b59-ae25-64a3380dc99b" />
-<img width="660" height="726" alt="image" src="https://github.com/user-attachments/assets/31cdbde2-a09e-4047-8020-51f27bd1b761" />
-<img width="572" height="553" alt="image" src="https://github.com/user-attachments/assets/f81051a6-eb77-4a6e-b68d-1857e9fd421a" />
-
----
-
-## notes
-
-this project is part of a broader effort to build structured, user-interactive terminal applications while strengthening core python fundamentals.
