@@ -86,7 +86,6 @@ or invoke the venv's python directly without activating:
 ## project structure
 
 * `pomodoro_timer_tui.py` → main TUI application
-* `pomodoro_timer_cli.py` → legacy command-line version
 * `requirements.txt` → pinned python dependencies
 * `venv/` → local virtual environment (git-ignored)
 
